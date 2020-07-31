@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* WHY? It handles how padding and border will be added to an element, adds without change it's original size */
+}
+
+
+body {
+    height: 100vh;
+    /* viewport height, is the visible area of my web page, by setting it to 100% I am able to take 100% of the height space */
+    background: white;
+}
+
+img {
+    width: 100px;
+}
