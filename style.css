@@ -5,13 +5,36 @@
     /* WHY? It handles how padding and border will be added to an element, adds without change it's original size */
 }
 
-
-body {
+body{
     height: 100vh;
+    display: flex;
     /* viewport height, is the visible area of my web page, by setting it to 100% I am able to take 100% of the height space */
-    background: white;
+    background-color:white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.animal-memory-game {
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.memory-card {
+    display: flex;
+    position: relative;
+    position: relative;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+    /* rotates my card 180deg */
+
 }
 
 img {
-    width: 100px;
+    width: 100%;
+    /* fixes my image perfectly */
 }
