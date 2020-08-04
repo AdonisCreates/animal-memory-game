@@ -1,6 +1,7 @@
 // list of all cards store in memory
 const cards = document.querySelectorAll('.memory-card')
 
+// this will loop through my list
 function flipCard() {
     this.classList.toggle('flip');
     console.log("I've been clicked!");

@@ -2,39 +2,57 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* WHY? It handles how padding and border will be added to an element, adds without change it's original size */
-}
-
-body{
+  }
+  
+  body {
     height: 100vh;
+    /* // viewport height takes 100% of the web page and not actual page, this is really good for centering games */
     display: flex;
-    /* viewport height, is the visible area of my web page, by setting it to 100% I am able to take 100% of the height space */
-    background-color:white;
-    padding: 0px;
-    margin: 0px;
-}
-
-.animal-memory-game {
+    background: magenta;
+  }
+  
+  .animal-memory-game {
+    width: 750px;
+    height: 750px;
     margin: auto;
-    width: 500px;
-    height: 500px;
     display: flex;
     flex-wrap: wrap;
-}
-
-.memory-card {
-    display: flex;
+    /* // perspective element gives it depth/the 3D effect */
+    perspective: 1000px;
+  }
+  
+  .memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
     position: relative;
-    position: relative;
-}
+    transform: scale(1);
+    /* // two lines of code below enforces the 3D effect */
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+  
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+  
 
-.memory-card.flip {
+  .memory-card.flip {
     transform: rotateY(180deg);
-    /* rotates my card 180deg */
-
-}
-
-img {
+  }
+  
+  .front-card,
+  .back-card {
     width: 100%;
-    /* fixes my image perfectly */
-}
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: white;
+    backface-visibility: hidden;
+  }
+  
+  .front-card {
+    transform: rotateY(180deg);
+  }
