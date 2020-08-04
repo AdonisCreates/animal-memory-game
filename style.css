@@ -8,9 +8,11 @@
     height: 100vh;
     /* // viewport height takes 100% of the web page and not actual page, this is really good for centering games */
     display: flex;
-    background: magenta;
+    /* // this gives my background a clean smooth color */
+    background: linear-gradient(white, black);
   }
   
+  /* // using flexbox here */
   .animal-memory-game {
     width: 750px;
     height: 750px;
@@ -31,12 +33,6 @@
     transform-style: preserve-3d;
     transition: transform .5s;
   }
-  
-  .memory-card:active {
-    transform: scale(0.97);
-    transition: transform .2s;
-  }
-  
 
   .memory-card.flip {
     transform: rotateY(180deg);
