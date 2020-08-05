@@ -11,6 +11,13 @@ let firstCard, secondCard;
 // store it in let in case we need to change 
 
 
+const startGame = () => {
+    alert('Press ok to start the memory game. If you match all cards, you win. If you can not... you LOSE!');
+    // finish filling out this function so it:
+      // shows status
+      // asks for action
+  }
+
 // refactor in a for of loop?
 // 
 // this will loop through my list
@@ -43,5 +50,6 @@ function flipCard() {
     }
 }
 };
+startGame();
 // event listener to click my cards
 cards.forEach(card => card.addEventListener('click', flipCard));
