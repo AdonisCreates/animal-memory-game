@@ -1,6 +1,8 @@
 # animal-memory-game
 A memory game built with HTML, CSS, JS, j.Query
 
+Live Site: https://animal-memory-game-git-master.adoniscreates.vercel.app/
+
 
 Introduction - the project's aim: build a fun animal memory game
 Technologies: HTML, CSS, JS, j.Query
