@@ -44,8 +44,12 @@ function flipCard() {
                 secondCard.classList.remove('flip');
             }, 1000);         
         
-    }
+    }   
 }
+
+$("h1").click(function(){
+    $(this).slideUp();
+  });
 
 };
 startGame();
