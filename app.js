@@ -4,10 +4,8 @@
 const cards = document.querySelectorAll('.memory-card');
 
 // when player flips card, we have to know if it's the first or second card, below is the logic for it
-// why do we set it to false? 
 let hasBeenFlipped = false;
 let firstCard, secondCard;
-
 // store it in let in case we need to change 
 
 
@@ -19,7 +17,6 @@ const startGame = () => {
   }
 
 // refactor in a for of loop?
-// 
 // this will loop through my list
 function flipCard() {
     this.classList.toggle('flip');
