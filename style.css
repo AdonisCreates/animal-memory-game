@@ -12,7 +12,6 @@
     background: linear-gradient(white, black);
   }
   
-  /* // using flexbox here */
   .animal-memory-game {
     width: 750px;
     height: 750px;
@@ -24,31 +23,37 @@
   }
   
   .memory-card {
+    /* // calc func allows us to subtract the margin from width + height */
     width: calc(25% - 10px);
     height: calc(33.333% - 10px);
     margin: 5px;
     position: relative;
     transform: scale(1);
-    /* // two lines of code below enforces the 3D effect */
+    /* // without this it'll sit on a 2D plane being flat. This enforces the 3D effect */
     transform-style: preserve-3d;
+    /* // transition shows it */
     transition: transform .5s;
   }
 
+  /* // this will rotate the Y axis cards 180 degrees */
   .memory-card.flip {
     transform: rotateY(180deg);
   }
   
   .front-card,
   .back-card {
+    /* // takes 100% of it's container  */
     width: 100%;
     height: 100%;
     padding: 20px;
     position: absolute;
     border-radius: 5px;
     background: white;
+    /* // hides HTML's backface, was inverting my photos */
     backface-visibility: hidden;
   }
   
+  /* // this will rotate so we can see our image */
   .front-card {
     transform: rotateY(180deg);
   }

@@ -11,12 +11,10 @@ let firstCard, secondCard;
 
 const startGame = () => {
     alert('Press ok to start the memory game. If you match all cards, you win. If you can not... you LOSE!');
-    // finish filling out this function so it:
-      // shows status
-      // asks for action
+    // prompting my user to start game
   }
 
-// refactor in a for of loop?
+// refactor in a for of loop? 
 // this will loop through my list
 function flipCard() {
     this.classList.toggle('flip');
