@@ -49,6 +49,7 @@ function flipCard() {
         
     }
 }
+
 };
 startGame();
 // event listener to click my cards
